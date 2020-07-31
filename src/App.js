@@ -23,7 +23,9 @@ function App() {
   return (
     <div className="container">
       <label>
-        <h1>Персонажи Star Wars</h1>
+        <header>
+          <h1>Персонажи Star Wars</h1>
+        </header>
         <input
           className="searchInput"
           onChange={(event) => setState({ search: event.target.value })}
