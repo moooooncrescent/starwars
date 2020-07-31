@@ -1,0 +1,12 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 25em;
+}
+.searchButton {
+  border-radius: 10px;
+  margin-left: 1vh;
+}
+.searchInput {
+  border-radius: 10px;
+}

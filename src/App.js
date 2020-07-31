@@ -21,15 +21,17 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="container">
       <label>
-        <span>Персонажи Star Wars</span>
+        <h1>Персонажи Star Wars</h1>
         <input
+          className="searchInput"
           onChange={(event) => setState({ search: event.target.value })}
           value={state.search}
         />
       </label>
       <button
+        className="searchButton"
         onClick={async () => {
           try {
             let data = await fetch(
@@ -48,18 +50,15 @@ function App() {
               eyes: data.eye_color,
             });
           } catch (err) {
-            console.log(err);
+            alert("error");
           }
         }}
       >
         Найти
       </button>
-      <p>Имя:{state.hero}</p>
-      <p>Планета:{state.homeworld}</p>
-      <p>Рост:{state.height}</p>
-      <p>Вес:{state.mass}</p>
-      <p>Пол:{state.gender}</p>
-      <div id="rectangle" style={squareStyle}></div>
+      <p style={{ color: "grey" }}>Имя: {state.hero}</p>
+      <p style={{ color: "grey" }}>Планета: {state.homeworld}</p>
+      <div className="rectangle" style={squareStyle}></div>
     </div>
   );
 }
